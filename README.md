@@ -1,2 +1,2 @@
 # Ninja-Rush
- A casual game created for unternship opportunity at Banzan Studios
+ A casual game created for internship opportunity at Banzan Studios
