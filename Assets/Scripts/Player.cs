@@ -29,8 +29,9 @@ public class Player : MonoBehaviour
                 {
                     transform.Translate(Vector2.right * speed * Time.deltaTime);
                 }
+                else
+                    isLeft = 0;
             }
-            isLeft = 0;
         }
         else
         {
@@ -41,8 +42,9 @@ public class Player : MonoBehaviour
                     transform.Translate(Vector2.left * speed * Time.deltaTime);
                     
                 }
+                else
+                    isLeft = 1;
             }
-            isLeft = 1;
         }
     }
 }
