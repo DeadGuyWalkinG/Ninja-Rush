@@ -4,15 +4,16 @@ public class Player : MonoBehaviour
 {
     private int isLeft = 0;
     public float speed = 10f;
+    [SerializeField] private float wallPos = 1.6f;
     private void Start()
     {
-        transform.position = new Vector2(1.79f, -2f);
+        transform.position = new Vector2(wallPos, -2f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Input.touchCount);
+        Debug.Log("Tapped");
         if (Input.touchCount > 0)
         {
             swapTower();
@@ -23,28 +24,19 @@ public class Player : MonoBehaviour
     {
         if (isLeft == 1)
         {
-            while (isLeft == 1)
+            while (transform.position.x <= wallPos)
             {
-                if (transform.position.x <= 1.79f)
-                {
-                    transform.Translate(Vector2.right * speed * Time.deltaTime);
-                }
-                else
-                    isLeft = 0;
+                transform.Translate(Vector2.up * speed * Time.deltaTime);
             }
+            isLeft = 0;
         }
         else
         {
-            while (isLeft == 0)
+            while (transform.position.x >= -wallPos)
             {
-                if (transform.position.x >= -1.79f)
-                {
-                    transform.Translate(Vector2.left * speed * Time.deltaTime);
-                    
-                }
-                else
-                    isLeft = 1;
+                transform.Translate(Vector2.down * speed * Time.deltaTime);
             }
+            isLeft = 1;
         }
     }
 }
