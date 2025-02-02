@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -14,7 +15,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Tapped");
         if (Input.touchCount > 0 && swapping == 0)
             swapTower();
     }
@@ -22,11 +22,17 @@ public class Player : MonoBehaviour
     void swapTower()
     {
         swapping = 1;
+        StartCoroutine(SwapTowerCoroutine());
+
+    }
+    IEnumerator SwapTowerCoroutine()
+    {
         if (isLeft == 1)
         {
             while (transform.position.x < wallPos)
             {
-                transform.Translate(Vector2.up * speed * Time.deltaTime);
+                transform.Translate(Vector2.down * speed * Time.deltaTime);
+                yield return null;
             }
             isLeft = 0;
         }
@@ -34,7 +40,8 @@ public class Player : MonoBehaviour
         {
             while (transform.position.x > -wallPos)
             {
-                transform.Translate(Vector2.down * speed * Time.deltaTime);
+                transform.Translate(Vector2.up * speed * Time.deltaTime);
+                yield return null;
             }
             isLeft = 1;
         }
