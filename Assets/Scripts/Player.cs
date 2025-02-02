@@ -15,10 +15,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         Debug.Log("Tapped");
-        if (Input.touchCount > 0 && swapping==0)
-        {
+        if (Input.touchCount > 0 && swapping == 0)
             swapTower();
-        }
     }
 
     void swapTower()
