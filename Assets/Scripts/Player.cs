@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
     private int isLeft = 0;
     public float speed = 10f;
     [SerializeField] private float wallPos = 1.6f;
+    private int swapping = 0;
     private void Start()
     {
         transform.position = new Vector2(wallPos, -2f);
@@ -14,7 +15,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Debug.Log("Tapped");
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && swapping==0)
         {
             swapTower();
         }
@@ -22,9 +23,10 @@ public class Player : MonoBehaviour
 
     void swapTower()
     {
+        swapping = 1;
         if (isLeft == 1)
         {
-            while (transform.position.x <= wallPos)
+            while (transform.position.x < wallPos)
             {
                 transform.Translate(Vector2.up * speed * Time.deltaTime);
             }
@@ -32,11 +34,12 @@ public class Player : MonoBehaviour
         }
         else
         {
-            while (transform.position.x >= -wallPos)
+            while (transform.position.x > -wallPos)
             {
                 transform.Translate(Vector2.down * speed * Time.deltaTime);
             }
             isLeft = 1;
         }
+        swapping = 0;
     }
 }
