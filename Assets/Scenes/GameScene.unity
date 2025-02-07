@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 71424941}
   - component: {fileID: 71424940}
   - component: {fileID: 71424942}
+  - component: {fileID: 71424943}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -223,6 +224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   wallPos: 1.6
+  anim: {fileID: 71424942}
+  rb: {fileID: 71424943}
 --- !u!70 &71424941
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -257,8 +260,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.99999994, y: 1.9999999}
+  m_Offset: {x: 0.44804424, y: -0.054014854}
+  m_Size: {x: 0.7068394, y: 1.4850674}
   m_Direction: 0
 --- !u!95 &71424942
 Animator:
@@ -282,6 +285,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &71424943
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71424937}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 2
 --- !u!1 &430695899
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +381,7 @@ Transform:
   m_GameObject: {fileID: 451959255}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2215831, y: -0.2070963, z: -0.048367225}
+  m_LocalPosition: {x: -3.2215831, y: -0.2070963, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -607,7 +637,7 @@ Transform:
   m_GameObject: {fileID: 809780037}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.8415833, y: 0.11, z: 0.048367225}
+  m_LocalPosition: {x: 6.8415833, y: 0.11, z: 0}
   m_LocalScale: {x: 3.4189, y: 11.305996, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -741,7 +771,7 @@ Transform:
   m_GameObject: {fileID: 1965547003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39841676, y: 0.110000074, z: 0.048367225}
+  m_LocalPosition: {x: -0.39841676, y: 0.110000074, z: 0}
   m_LocalScale: {x: 3.4189, y: 11.305996, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
