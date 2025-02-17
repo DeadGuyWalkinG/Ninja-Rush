@@ -18,7 +18,7 @@ public class Tower : MonoBehaviour
 
         if (transform.position.y < spawnFlag && flag == 1)
         {
-            FindAnyObjectByType<Spawn>().spawnTower();
+            FindAnyObjectByType<Logic>().spawnTower();
             flag = 0;
         }
 
