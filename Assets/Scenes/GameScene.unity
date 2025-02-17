@@ -342,6 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers: {fileID: 0}
+  spawnpoint: 21.86
 --- !u!4 &430695901
 Transform:
   m_ObjectHideFlags: 0
