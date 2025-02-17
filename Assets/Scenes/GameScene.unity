@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 430695901}
   - component: {fileID: 430695900}
   m_Layer: 0
-  m_Name: LevelSpawn
+  m_Name: LevelLogic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
