@@ -3,7 +3,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     [SerializeField] private GameObject towers;
-    [SerializeField] private float spawnpoint = 21.86f;
+    [SerializeField] private float spawnPoint = 21.86f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
