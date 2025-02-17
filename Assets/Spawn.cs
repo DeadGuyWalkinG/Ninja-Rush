@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
+    [SerializeField] private GameObject towers;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
