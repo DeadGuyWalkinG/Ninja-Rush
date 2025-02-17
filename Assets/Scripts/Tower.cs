@@ -3,15 +3,27 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private float spawnFlag = -5.69f;
+    private int flag = 1;
+    [SerializeField] private float deletePoint = -21.5f;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector2.down * speed * Time.deltaTime);
+
+        if (transform.position.y < spawnFlag && flag == 1)
+        {
+            FindAnyObjectByType<Spawn>().spawnTower();
+            flag = 0;
+        }
+
+        if (transform.position.y < deletePoint)
+            Destroy(gameObject);
     }
+
 }
