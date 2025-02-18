@@ -2,15 +2,24 @@ using UnityEngine;
 
 public class Spikes : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float speed = 10f;
+    private int flag = 1;
+    [SerializeField] private float spawnFlag;
+    [SerializeField] private float deletePoint;
+
+   void Update()
     {
-        
+        transform.Translate(Vector2.down * speed * Time.deltaTime);
+
+        /*if (transform.position.y < spawnFlag && flag == 1)
+        {
+            FindAnyObjectByType<Logic>().spawnTower(-3.221583f);
+            flag = 0;
+        }
+
+        if (transform.position.y < deletePoint)
+            Destroy(gameObject);*/
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -13,7 +13,12 @@ public class Logic : MonoBehaviour
     }
 
     public void spawnSpike()
-    { 
-        
+    {
+        float sp = -1.79f;
+        if (Random.Range(1, 3) == 1)
+            sp = sp * 1;
+        else 
+            sp = sp * -1;
+        Instantiate(spikes, new Vector2(sp, 8), Quaternion.identity);
     }
 }
