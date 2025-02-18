@@ -344,6 +344,7 @@ MonoBehaviour:
   towers: {fileID: 1073956262909693970, guid: 1e455467618e91f4f82398abda2d1b21, type: 3}
   spikes: {fileID: 7454257065490965863, guid: ce6778ff0cef38d4c8ec3289e0006ba3, type: 3}
   spawnPoint: 16.56
+  spikeRate: 2
 --- !u!4 &430695901
 Transform:
   m_ObjectHideFlags: 0

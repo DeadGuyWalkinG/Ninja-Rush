@@ -7,6 +7,7 @@ public class Logic : MonoBehaviour
     [SerializeField] private float spawnPoint = 21.86f;
     [SerializeField] private float spikeRate = 2f;
     private float nextSpike;
+    private int score=0;
 
     void Start()
     {
@@ -26,12 +27,14 @@ public class Logic : MonoBehaviour
     [ContextMenu("Spawn Tower")]
     public void spawnTower()
     {
+        //spawn towers continously
         Instantiate(towers, new Vector2(-3.221583f, spawnPoint), Quaternion.identity);
     }
 
     [ContextMenu("Spawn Spike")]
     public void spawnSpike()
     {
+        //spawn spikes randomly on the two sides of the tower
         float sp = -1.79f;
         float r=-90;
         int x;
@@ -47,5 +50,11 @@ public class Logic : MonoBehaviour
     public void gameOver()
     { 
         //gameover screen enables
+    }
+
+    public void increaseScore()
+    {
+        //increase scorepoints
+        score++;
     }
 }

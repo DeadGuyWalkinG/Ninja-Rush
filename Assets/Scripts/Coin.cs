@@ -8,6 +8,8 @@ public class Coin : MonoBehaviour
         if (collision.collider.tag == "Player")
         {
             Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+            Destroy(gameObject);
+            FindAnyObjectByType<Logic>().increaseScore();
         }
     }
 }
