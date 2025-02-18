@@ -17,16 +17,13 @@ public class Logic : MonoBehaviour
     {
         float sp = -1.79f;
         float r=90;
+        int x;
         if (Random.Range(1, 3) == 1)
-        {
-            sp = sp * 1;
-            r = r * 1;
-        }
+            x = 1;
         else
-        {
-            sp = sp * -1;
-            r = r * -1;
-        }
+            x = -1;
+        sp = sp * x;
+        r = r * x;
         Instantiate(spikes, new Vector2(sp, 8), Quaternion.Euler(0,0,r));
     }
 }
