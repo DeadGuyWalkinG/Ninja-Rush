@@ -20,16 +20,6 @@ public class Spikes : MonoBehaviour
     void Update()
     {
         transform.Translate(movementDirection * speed * Time.deltaTime);
-
-        /*if (transform.position.y < spawnFlag && flag == 1)
-        {
-            FindAnyObjectByType<Logic>().spawnTower();
-            flag = 0;
-        }
-
-        if (transform.position.y < deletePoint)
-            Destroy(gameObject);*/
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
