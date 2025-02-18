@@ -16,7 +16,7 @@ public class Logic : MonoBehaviour
     public void spawnSpike()
     {
         float sp = -1.79f;
-        float r=90;
+        float r=-90;
         int x;
         if (Random.Range(1, 3) == 1)
             x = 1;
@@ -25,5 +25,10 @@ public class Logic : MonoBehaviour
         sp = sp * x;
         r = r * x;
         Instantiate(spikes, new Vector2(sp, 8), Quaternion.Euler(0,0,r));
+    }
+
+    public void gameOver()
+    { 
+        //gameover screen enables
     }
 }

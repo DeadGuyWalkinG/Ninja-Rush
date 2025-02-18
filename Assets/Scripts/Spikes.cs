@@ -6,20 +6,36 @@ public class Spikes : MonoBehaviour
     private int flag = 1;
     [SerializeField] private float spawnFlag;
     [SerializeField] private float deletePoint;
+    private Vector2 movementDirection;
 
-   void Update()
+    void Start()
     {
-        transform.Translate(Vector2.down * speed * Time.deltaTime);
+        if (transform.position.x > 0)
+            movementDirection = Vector2.left;
+        else
+            movementDirection = Vector2.right;
+
+    }
+
+    void Update()
+    {
+        transform.Translate(movementDirection * speed * Time.deltaTime);
 
         /*if (transform.position.y < spawnFlag && flag == 1)
         {
-            FindAnyObjectByType<Logic>().spawnTower(-3.221583f);
+            FindAnyObjectByType<Logic>().spawnTower();
             flag = 0;
         }
 
         if (transform.position.y < deletePoint)
             Destroy(gameObject);*/
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Player")
+            FindAnyObjectByType<Logic>().gameOver();
     }
 
 }
