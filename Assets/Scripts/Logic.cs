@@ -5,6 +5,23 @@ public class Logic : MonoBehaviour
     [SerializeField] private GameObject towers;
     [SerializeField] private GameObject spikes;
     [SerializeField] private float spawnPoint = 21.86f;
+    [SerializeField] private float spikeRate = 2f;
+    private float nextSpike;
+
+    void Start()
+    {
+        nextSpike = spikeRate;
+    }
+
+    void Update()
+    {
+        if (Time.time > nextSpike)
+        {
+            spawnSpike();
+            nextSpike = Time.time + spikeRate;
+        }
+
+    }
 
     [ContextMenu("Spawn Tower")]
     public void spawnTower()
