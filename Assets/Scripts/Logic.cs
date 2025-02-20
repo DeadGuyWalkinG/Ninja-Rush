@@ -4,14 +4,12 @@ using UnityEngine.UI;
 
 public class Logic : MonoBehaviour
 {
-    [SerializeField] private GameObject towers;
     [SerializeField] private GameObject spikes;
     [SerializeField] private GameObject coin;
     [SerializeField] private float spikeRate = 2f;
     [SerializeField] private float coinRate = 1.5f;
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private Text gameScore;
-    private float spawnPoint = 21.86f;
     private float nextSpike;
     private float nextCoin;
     private int score=0;
@@ -38,14 +36,6 @@ public class Logic : MonoBehaviour
 
     }
 
-    [ContextMenu("Spawn Tower")]
-    public void spawnTower()
-    {
-        //spawn towers continously
-        Instantiate(towers, new Vector2(-3.221583f, spawnPoint), Quaternion.identity);
-    }
-
-    [ContextMenu("Spawn Spike")]
     public void spawnItem(GameObject item)
     {
         //spawn spikes or coins randomly on the two sides of the tower
