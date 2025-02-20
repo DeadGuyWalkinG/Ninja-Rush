@@ -68,6 +68,7 @@ public class Logic : MonoBehaviour
     public void gameOver()
     {
         //gameover screen enabless
+        Debug.Log("Game Over");
         Time.timeScale = 0;
         gameOverScreen.SetActive(true);
 
