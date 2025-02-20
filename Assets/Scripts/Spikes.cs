@@ -20,6 +20,9 @@ public class Spikes : MonoBehaviour
     void Update()
     {
         transform.Translate(movementDirection * speed * Time.deltaTime);
+
+        if (transform.position.y < -15)
+            Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
