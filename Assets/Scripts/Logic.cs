@@ -39,7 +39,7 @@ public class Logic : MonoBehaviour
     public void spawnItem(GameObject item)
     {
         //spawn spikes or coins randomly on the two sides of the tower
-        float sp = -1.69f;
+        float sp = -1.5f;
         float r = 0;
         int x;
         if (Random.Range(1, 3) == 1)
@@ -76,5 +76,10 @@ public class Logic : MonoBehaviour
         Debug.Log("Game Reset");
         SceneManager.LoadScene("GameScene");
         Time.timeScale = 1;
+    }
+
+    public void exitButton()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
