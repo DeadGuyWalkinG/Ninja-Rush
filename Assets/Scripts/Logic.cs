@@ -82,4 +82,14 @@ public class Logic : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void startButton()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void exitGameButton()
+    { 
+        Application.Quit();
+    }
 }
