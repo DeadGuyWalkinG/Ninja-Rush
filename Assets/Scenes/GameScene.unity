@@ -306,7 +306,6 @@ MonoBehaviour:
   wallPos: 1.6
   anim: {fileID: 71424942}
   rb: {fileID: 71424943}
-  bgmusic: {fileID: 8300000, guid: 78ab2ce52945df946a866a2ab1dd6532, type: 3}
 --- !u!70 &71424941
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
