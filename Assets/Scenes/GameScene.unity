@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit
+  m_Text: Menu
 --- !u!222 &66286025
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -898,7 +898,7 @@ GameObject:
   - component: {fileID: 677361891}
   - component: {fileID: 677361890}
   m_Layer: 5
-  m_Name: Exit Button
+  m_Name: Menu Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1435,7 +1435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 35, y: -666}
+  m_AnchoredPosition: {x: 49.6, y: -765.3}
   m_SizeDelta: {x: 327.065, y: 82.1478}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1262442993
@@ -1972,7 +1972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63, y: -880}
+  m_AnchoredPosition: {x: 63, y: -979.3}
   m_SizeDelta: {x: 340.4166, y: 175.1581}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2020553468
