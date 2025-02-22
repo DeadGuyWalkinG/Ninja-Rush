@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     private int swapping=0;
     public Animator anim;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private AudioClip bgmusic;
+    private AudioSource audioSource;
     private void Start()
     {
         transform.position = new Vector2(wallPos, -2f);
@@ -17,10 +19,13 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount > 0 && swapping==0)
+        if (Input.touchCount > 0 && swapping == 0)
+        {
+            audioSource.clip = bgmusic;
+            audioSource.Play();
             swapTower();
+        }
     }
-
     void swapTower()
     {
         swapping = 1;
