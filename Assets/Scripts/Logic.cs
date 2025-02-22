@@ -10,6 +10,8 @@ public class Logic : MonoBehaviour
     [SerializeField] private float coinRate = 1.5f;
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private Text gameScore;
+    [SerializeField] private AudioClip bgmusic;
+    private AudioSource audioSource;
     private float nextSpike;
     private float nextCoin;
     private int score=0;
@@ -18,6 +20,8 @@ public class Logic : MonoBehaviour
     {
         nextSpike = spikeRate;
         nextCoin = coinRate;
+        audioSource.clip = bgmusic;
+        audioSource.Play();
     }
 
     void Update()
