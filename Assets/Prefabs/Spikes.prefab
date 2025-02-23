@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8554683336688410672}
   - component: {fileID: 8682200048951144260}
-  - component: {fileID: 1020547123533599334}
   - component: {fileID: 595702276037195926}
+  - component: {fileID: 4097848743354737555}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Trap
@@ -89,7 +89,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1020547123533599334
+--- !u!114 &595702276037195926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454257065490965863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25634e80aab991d4e835d0ee36f4d7d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7.5
+  spawnFlag: 0
+  deletePoint: 0
+--- !u!61 &4097848743354737555
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +138,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0011183769, y: -0.0040308833}
+  m_Offset: {x: 0, y: 0.11852698}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -133,20 +148,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.85907507, y: 0.19115537}
+  m_Size: {x: 0.8541667, y: 0.42455402}
   m_EdgeRadius: 0
---- !u!114 &595702276037195926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7454257065490965863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25634e80aab991d4e835d0ee36f4d7d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  spawnFlag: 0
-  deletePoint: 0

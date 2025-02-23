@@ -24,7 +24,7 @@ public class Coin : MonoBehaviour
 
         else if (collision.collider.tag == "Trap")
         { 
-            transform.position = new Vector2(transform.position.x*-1, transform.position.y);
+            transform.position = new Vector2(transform.position.x*(-1), transform.position.y);
         }
     }
 }
