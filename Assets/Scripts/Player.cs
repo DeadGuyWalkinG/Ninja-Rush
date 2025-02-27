@@ -40,7 +40,6 @@ public class Player : MonoBehaviour
             while (transform.position.x < wallPos)
             { 
                 //transform.Translate(Vector2.down * speed * Time.deltaTime);
-                Debug.Log(transform.position.x);
                 yield return null;
             }
             rb.linearVelocityX = 0;
@@ -53,7 +52,6 @@ public class Player : MonoBehaviour
             while (transform.position.x > -wallPos)
             {
                 //transform.Translate(Vector2.up * speed * Time.deltaTime);
-                Debug.Log(transform.position.x);
                 yield return null;
             }
             rb.linearVelocityX = 0;
