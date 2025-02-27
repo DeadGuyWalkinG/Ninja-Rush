@@ -43,7 +43,7 @@ public class Logic : MonoBehaviour
     public void spawnItem(GameObject item)
     {
         //spawn spikes or coins randomly on the two sides of the tower
-        float sp = -1.5f;
+        float sp = -1.6f;
         float r = 0;
         int x;
         if (Random.Range(1, 3) == 1)
