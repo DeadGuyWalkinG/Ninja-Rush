@@ -78,8 +78,8 @@ public class Logic : MonoBehaviour
     public void retryButton()
     {
         Debug.Log("Game Reset");
-        SceneManager.LoadScene("GameScene");
         Time.timeScale = 1;
+        SceneManager.LoadScene("GameScene");
     }
 
     public void exitButton()
